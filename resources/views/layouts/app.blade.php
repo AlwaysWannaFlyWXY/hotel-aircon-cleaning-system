@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AirCare | ホテル空調清掃管理</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}">` --}}
 </head>
 <body>
     <header class="topbar">
