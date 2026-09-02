@@ -38,12 +38,12 @@ APP_ENV=production
 APP_DEBUG=false
 APP_URL=https://your-service.onrender.com
 DB_CONNECTION=pgsql
-DB_HOST=your-supabase-pooler-host
+DB_HOST=aws-0-ap-northeast-1.pooler.supabase.com
 DB_PORT=5432
 DB_DATABASE=postgres
-DB_USERNAME=your-pooler-username
+DB_USERNAME=postgres.your-supabase-project-ref
 DB_PASSWORD=your-supabase-password
 DB_SSLMODE=require
 ```
 
-Render supplies `PORT` automatically; the container uses it when starting Laravel.
+For a Supabase pooler, `DB_USERNAME` must be `postgres.<your-project-ref>` (not simply `postgres`). Do not include square brackets around the password. If you set `DATABASE_URL` in Render, remove it or update it too, because it overrides the individual `DB_*` values. Render supplies `PORT` automatically; the container uses it when starting Laravel.
